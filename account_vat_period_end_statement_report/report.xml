@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
-       
-        <report 
+		<!--
+		<data noupdate="1"> 
+		<record id="paperformat_account_vat_period_end_statement" model="report.paperformat">
+			<field name="name">Vat Period End Statement</field>
+			<field name="default" eval="True"/>
+			<field name="orientation">Portrait</field>
+			<field name="margin_top">35</field>
+			<field name="margin_bottom">3</field>
+			<field name="margin_left">3</field>
+			<field name="margin_right">3</field>
+			<field name="header_line" eval="False"/>
+			<field name="header_spacing">30</field>
+			<field name="dpi">80</field>
+		</record>
+		  -->
+		<report 
             id="action_report_account_vat_period_end_statement" 
             model="account.vat.period.end.statement" 
             string="Print Vat Period End Statement"
@@ -12,6 +26,5 @@
             menu="True"
             auto="False"
         />
-
     </data>
 </openerp>

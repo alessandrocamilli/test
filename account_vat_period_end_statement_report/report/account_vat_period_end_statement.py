@@ -56,7 +56,7 @@ class vat_period_end_statement_report(report_sxw.rml_parse):
             'account_vat_amounts': self._get_account_vat_amounts,
         })
         self.context = context
-    
+        
     def _get_statement(self, statement_id):
         statement_obj = self.pool['account.vat.period.end.statement']
         statement = False
