@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+<data>
+	<record id="invoice_delete_final_form_view" model="ir.ui.view">
+            <field name="name">invoice.delete.final.form.view</field>
+            <field name="model">account.invoice</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="/form/header/button[@name='invoice_cancel']" position="after">
+                    <button name="action_final_delete" type="object" states="draft" string="Final Delete" icon="gtk-convert" 
+                    groups="account.group_account_manager"/>
+                </xpath>
+            </field>
+        </record>
+        
+        <record id="invoice_purchase_delete_final_form_view" model="ir.ui.view">
+            <field name="name">invoice.purchase.delete.final.form.view</field>
+            <field name="model">account.invoice</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="/form/header/button[@name='invoice_cancel']" position="after">
+                    <button name="action_final_delete" type="object" states="draft" string="Final Delete" icon="gtk-convert" 
+                    groups="account.group_account_manager"/>
+                </xpath>
+            </field>
+        </record>
+        
+</data>
+</openerp>
